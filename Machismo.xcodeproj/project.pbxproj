@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		312C3DE5186B88C100A883B7 /* Deck.m in Sources */ = {isa = PBXBuildFile; fileRef = 312C3DE4186B88C100A883B7 /* Deck.m */; };
 		31340DA4185525D7001A1DB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31340DA3185525D7001A1DB9 /* Foundation.framework */; };
 		31340DA6185525D7001A1DB9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31340DA5185525D7001A1DB9 /* CoreGraphics.framework */; };
 		31340DA8185525D7001A1DB9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31340DA7185525D7001A1DB9 /* UIKit.framework */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		312C3DE3186B88C100A883B7 /* Deck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Deck.h; path = Model/Deck.h; sourceTree = "<group>"; };
+		312C3DE4186B88C100A883B7 /* Deck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Deck.m; path = Model/Deck.m; sourceTree = "<group>"; };
 		31340DA0185525D7001A1DB9 /* Machismo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Machismo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31340DA3185525D7001A1DB9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		31340DA5185525D7001A1DB9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,11 +85,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		312C3DE6186BA48A00A883B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				312C3DE3186B88C100A883B7 /* Deck.h */,
+				312C3DE4186B88C100A883B7 /* Deck.m */,
+				31340DDB18552F8D001A1DB9 /* Card.h */,
+				31340DDC18552F8D001A1DB9 /* Card.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		31340D97185525D7001A1DB9 = {
 			isa = PBXGroup;
 			children = (
-				31340DDB18552F8D001A1DB9 /* Card.h */,
-				31340DDC18552F8D001A1DB9 /* Card.m */,
+				312C3DE6186BA48A00A883B7 /* Model */,
 				31340DA9185525D7001A1DB9 /* Machismo */,
 				31340DC8185525D7001A1DB9 /* MachismoTests */,
 				31340DA2185525D7001A1DB9 /* Frameworks */,
@@ -255,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				312C3DE5186B88C100A883B7 /* Deck.m in Sources */,
 				31340DDD18552F8D001A1DB9 /* Card.m in Sources */,
 				31340DB4185525D7001A1DB9 /* CardGameAppDelegate.m in Sources */,
 				31340DBA185525D7001A1DB9 /* CardGameViewController.m in Sources */,
@@ -467,6 +481,7 @@
 				31340DD4185525D7001A1DB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		31340DD5185525D7001A1DB9 /* Build configuration list for PBXNativeTarget "MachismoTests" */ = {
 			isa = XCConfigurationList;
@@ -475,6 +490,7 @@
 				31340DD7185525D7001A1DB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
