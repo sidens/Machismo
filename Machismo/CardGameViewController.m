@@ -12,7 +12,7 @@
 @interface CardGameViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *flipsLabel;
 @property (nonatomic) int flipCount;
-@property (nonatomic) Deck * deck;
+@property (strong, nonatomic) Deck * deck;
 @end
 
 @implementation CardGameViewController
@@ -26,8 +26,7 @@
 
 - (IBAction)touchCardButton:(UIButton *)sender
 {
-    while (self.flipCount<52)
-    {
+    
         if( [sender.currentTitle length] ) //Show the back of the card
         {
             [sender setBackgroundImage:[UIImage imageNamed:@"cardback"]
@@ -36,15 +35,15 @@
         }
         else //Show the front of the card
         {
-            Card *card = [self.deck drawRandomCard]; //Draw random card
-            
-            [sender setBackgroundImage:[UIImage imageNamed:@"cardfront"]
-                              forState:UIControlStateNormal];
-            [sender setTitle:[card contents] forState:UIControlStateNormal];
+            Card *randomCard = [self.deck drawRandomCard]; //Draw random card
+            if (randomCard) {
+                [sender setBackgroundImage:[UIImage imageNamed:@"cardfront"]
+                                  forState:UIControlStateNormal];
+                [sender setTitle:randomCard.contents forState:UIControlStateNormal];
+
+            }
         }
         self.flipCount++;
-    }
-    
 }
 
 -(Deck *) deck{
@@ -52,7 +51,8 @@
     return _deck;
 }
 
-
-
+-(Deck *) createDeck{
+    return [[PlayingCardDeck alloc] init];
+}
 
 @end
